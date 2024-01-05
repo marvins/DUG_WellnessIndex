@@ -1,0 +1,37 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: pages/intro
+chapters:
+- file: pages/Latest_Results
+  title: Latest Processing Results
+- file: pages/landsat_lst
+  title: Pipeline and Workflow
+  sections:
+  - file: pages/Part01_Cleaning_Landsat_Data
+  - file: pages/Part02_Data_Wrangling
+  - file: pages/Part03_Landsat_89_NDVI_and_LST
+  - file: pages/Part04_Evaluating_Landsat7_ARD_LST
+  - file: pages/Part05_NDVI_With_Planet_Imagery
+  - file: pages/Part06_Landsat_Ephemeris
+  - file: pages/Part07_Solving_Weather
+  - file: pages/Part08_Report_Generation
+  - file: pages/Part09_Fetch_OpenET_Data
+  - file: pages/Part00_OpenET_Time_Series
+  - file: pages/Part10_OpenET_Non_Garden_Data
+  - file: pages/Part11_Accessing_NOAA_Weather_Data
+  - file: pages/Part12_Analyzing_OpenET_Results
+  - file: pages/Planet-API-Notes
+  - file: pages/Random-Helper-Scripts
+- file: pages/logs/main
+  sections:
+  - file: pages/logs/20231202_notes
+  - file: pages/logs/20231207_notes
+  - file: pages/logs/20231208_notes
+  - file: pages/logs/20231224_notes
+  - file: pages/logs/20231226_notes
+  - file: pages/logs/20231227_notes
+  - file: pages/logs/todo
+- file: pages/citations.md
+
