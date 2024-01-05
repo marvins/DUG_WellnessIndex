@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>DUG Gardens</name>
+	<gx:CascadingStyle kml:id="__managed_style_20D645C51A2D5D4FE265">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_1535EDAC252D5D4FE265">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_0415C965772D5D4FE265">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1535EDAC252D5D4FE265</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_20D645C51A2D5D4FE265</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0CEE9062F32D5D1714C5">
+		<name>Historic Baker Neighborhood Community Garden</name>
+		<LookAt>
+			<longitude>-104.9897351957294</longitude>
+			<latitude>39.71502657652717</latitude>
+			<altitude>1604.09825756278</altitude>
+			<heading>0.9095769922428696</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>63.63656745657865</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9896432430947,39.71504707420846,1606.234344300289</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0FD6CB1A7A2D5D17BD9D">
+		<name>West Washington Park Community Garden</name>
+		<LookAt>
+			<longitude>-104.984544040125</longitude>
+			<latitude>39.71978830313946</latitude>
+			<altitude>1607.78432319688</altitude>
+			<heading>0.04415707101980507</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>242.9094229829571</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.984135616632,39.71980666383153,1609.692403212369</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="054BE9B6072D5D18BDDF">
+		<name>Casa Verde Community Garden</name>
+		<LookAt>
+			<longitude>-104.9966342813753</longitude>
+			<latitude>39.72257516546965</latitude>
+			<altitude>1601.79262197983</altitude>
+			<heading>0.04415706801541251</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>114.0069491900067</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9966376290834,39.72267291439736,1603.836141343848</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0B68DD40652D5D1929C8">
+		<name>Elati Community Garden</name>
+		<LookAt>
+			<longitude>-104.9941760305032</longitude>
+			<latitude>39.72960912273485</latitude>
+			<altitude>1598.570961515863</altitude>
+			<heading>0.04415706454880546</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>157.2930745015219</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9937611732516,39.72970425919151,1599.681391871394</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="06A81D340C2D5D19D0D7">
+		<name>Shoshone Community Garden</name>
+		<LookAt>
+			<longitude>-105.0092873036685</longitude>
+			<latitude>39.76297758832542</latitude>
+			<altitude>1604.201211034585</altitude>
+			<heading>0.02091574169181899</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999999999999</gx:fovy>
+			<range>235.6034264679693</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-105.0094158398529,39.76298454172355,1606.922275956833</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="058BAD8F292D5D1A5985">
+		<name>El Oasis Community Garden</name>
+		<LookAt>
+			<longitude>-105.0090381361502</longitude>
+			<latitude>39.76598273045393</latitude>
+			<altitude>1607.845520962986</altitude>
+			<heading>0.02091573390267309</heading>
+			<tilt>0</tilt>
+			<gx:fovy>34.99999999999999</gx:fovy>
+			<range>240.455656893937</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-105.008819750435,39.76604198188951,1609.375423688877</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="065D1E15CF2D5D1B1D8D">
+		<name>36th and Lafayette Community Garden</name>
+		<LookAt>
+			<longitude>-104.9708816990245</longitude>
+			<latitude>39.76717037327987</latitude>
+			<altitude>1587.424872872135</altitude>
+			<heading>3.158962491130937e-05</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>153.0994239725624</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9706566368425,39.76716096808406,1589.224467977906</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F3D76A7D92D5D1BA9B8">
+		<name>Gove Community Garden</name>
+		<LookAt>
+			<longitude>-104.9412794315155</longitude>
+			<latitude>39.73727855622072</latitude>
+			<altitude>1615.258455529093</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>280.8057250401544</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9409777,39.737162,1617.564420467029</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="07A2C342F12D5D504646">
+		<name>San Rafael Community Garden</name>
+		<LookAt>
+			<longitude>-104.9764753932602</longitude>
+			<latitude>39.75048279011268</latitude>
+			<altitude>1599.89501579407</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>255.0266023954464</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9761179545252,39.75039753988382,1603.078595923329</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0CB6A4906A2D5D50BB21">
+		<name>Morey Middle School Community Garden</name>
+		<LookAt>
+			<longitude>-104.977729391109</longitude>
+			<latitude>39.73777565266106</latitude>
+			<altitude>1612.98848623981</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>170.8685768769283</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9774168340915,39.73782935545323,1615.237606663049</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="029620077E2D5D518A99">
+		<name>Depot Park Community Garden</name>
+		<LookAt>
+			<longitude>-104.995313739901</longitude>
+			<latitude>39.66079636230025</latitude>
+			<altitude>1616.374115757609</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>228.9281156091602</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9950219561143,39.66073947660757,1618.412359441178</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0904BAD6742D5D5273FB">
+		<name>Academia Sandoval School Community Garden</name>
+		<LookAt>
+			<longitude>-105.0152234361151</longitude>
+			<latitude>39.76588263360857</latitude>
+			<altitude>1618.80442777546</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>198.7886607296969</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-105.0152103,39.7658117,1620.709916350468</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="02B9F7AEEC2D5D5317FC">
+		<name>Barnum Community Garden and Orchard</name>
+		<LookAt>
+			<longitude>-105.0343710212395</longitude>
+			<latitude>39.71927232020989</latitude>
+			<altitude>1609.417435620153</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>245.7048500641395</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-105.0346144954719,39.71920022921756,1611.446163488091</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="03FA6C86902D5D53D4D2">
+		<name>Farmers Community Garden</name>
+		<LookAt>
+			<longitude>-104.993516622514</longitude>
+			<latitude>39.53541804129888</latitude>
+			<altitude>1746.680468116139</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>201.0592078957779</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9934714,39.5354428,1748.722846474912</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0365D8444D2D5D5448DA">
+		<name>Common Earth Community Garden</name>
+		<LookAt>
+			<longitude>-105.1296808254134</longitude>
+			<latitude>39.82636040589747</latitude>
+			<altitude>1657.394053935701</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>229.7569233846662</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-105.1293292495057,39.82617213313996,1658.795632544327</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08822051E22D5D54B1D6">
+		<name>Arvada Community Garden</name>
+		<LookAt>
+			<longitude>-105.0998527211145</longitude>
+			<latitude>39.80069554202498</latitude>
+			<altitude>1637.003770872376</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>294.1855273553665</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-105.0996624983654,39.80071248237228,1638.714043719958</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C9485BC092D5D5504CE">
+		<name>Regis University Community Garden</name>
+		<LookAt>
+			<longitude>-105.0341884751132</longitude>
+			<latitude>39.79237194841738</latitude>
+			<altitude>1622.829546730816</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>400.9227761509829</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-105.0342112788273,39.79220249044494,1627.040466838545</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F631201572D5D558F93">
+		<name>McMeen School Community Garden</name>
+		<LookAt>
+			<longitude>-104.9196289179952</longitude>
+			<latitude>39.69809148695266</latitude>
+			<altitude>1639.476400890371</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>607.8636939034914</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9194959465796,39.69812623006721,1641.347583549802</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="095E373BFA2D5D55FCA8">
+		<name>Cole Community Garden</name>
+		<LookAt>
+			<longitude>-104.9710246046492</longitude>
+			<latitude>39.76219069547995</latitude>
+			<altitude>1589.169407258531</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>103.7503167997238</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9710996076849,39.76221043014414,1590.927276572232</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F3E6FB7682D5D57F262">
+		<name>Delaney Community Garden</name>
+		<LookAt>
+			<longitude>-104.8079075362251</longitude>
+			<latitude>39.71482265218572</latitude>
+			<altitude>1655.301351368317</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>653.1943036657321</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.8072789106135,39.71473205811824,1657.379812081798</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="027878E3A92D5D58B700">
+		<name>Samuels Community Garden</name>
+		<LookAt>
+			<longitude>-104.8927866664443</longitude>
+			<latitude>39.64355504532757</latitude>
+			<altitude>1689.685943978918</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>211.5485317948333</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.8925941007306,39.64352416430752,1693.477156563908</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="07616D9BCB2D5D591F96">
+		<name>DU Bridge Community Garden</name>
+		<LookAt>
+			<longitude>-104.9637360852385</longitude>
+			<latitude>39.67431583983198</latitude>
+			<altitude>1632.746706226445</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>178.6340345328244</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9638375955924,39.67439943962392,1634.012395167519</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="091599E9272D5D59B450">
+		<name>Cook Park Community Garden</name>
+		<LookAt>
+			<longitude>-104.920607784184</longitude>
+			<latitude>39.68605916293089</latitude>
+			<altitude>1659.51927526631</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>241.4781135120939</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9203691165885,39.68591454171458,1661.23720595506</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A938BC9792D5D5A4D67">
+		<name>Wild Sage Community Garden</name>
+		<LookAt>
+			<longitude>-104.8861345848549</longitude>
+			<latitude>39.66802495289844</latitude>
+			<altitude>1661.21786185292</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>94.3802449681516</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.8861017046015,39.66799452062672,1663.161689169242</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="008AACEEF92D5D5E82D4">
+		<name>City Lights Community Garden</name>
+		<LookAt>
+			<longitude>-104.9817725751855</longitude>
+			<latitude>39.74920905348473</latitude>
+			<altitude>1598.51106738928</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>241.7321168234776</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0415C965772D5D4FE265</styleUrl>
+		<Point>
+			<coordinates>-104.9813756006046,39.74915482987547,1600.35325632453</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
