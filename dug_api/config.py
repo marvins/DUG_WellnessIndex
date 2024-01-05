@@ -86,7 +86,7 @@ class Configuration:
     def _create_collection_config( self, config_path, collect_data ):
 
         #  import configparser
-        cid = collect_data['cid']
+        cid = collect_data['cid'].values[0]
         logging.info( f'Building new ls config for cid: {cid}' )
         config = configparser.ConfigParser()
         config['general'] = {}

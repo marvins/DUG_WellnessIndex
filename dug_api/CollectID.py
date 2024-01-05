@@ -17,17 +17,17 @@ class Sensor(enum.Enum):
         if value == 'T':
             return Sensor.T
         if value == 'E':
-            return Sensor.T
+            return Sensor.E
         return None
 
 class ProductType(enum.Enum):
-    L1GT = enum.auto()
-    L1TP = enum.auto()
-    L2SP = enum.auto()
-    CU   = enum.auto()
+    L1GT   = enum.auto()
+    L1TP   = enum.auto()
+    L2SP   = enum.auto()
+    ARD_CU = enum.auto()
 
     def is_ard(self):
-        if self == ProductType.CU:
+        if self == ProductType.ARD_CU:
             return True
         return False
 
@@ -47,7 +47,7 @@ class ProductType(enum.Enum):
         if self == Product.L2SP:
             return 'Collection 2, Level 2, Science Product'
             
-        if self == Product.CU:
+        if self == Product.ARD_CU:
             return 'Analysis Ready Data (ARD), CONUS'
         raise Exception('Unknown type')
 
@@ -60,82 +60,30 @@ class ProductType(enum.Enum):
         if value == 'L2SP':
             return ProductType.L2SP
         if value == 'CU':
-            return ProductType.CU
+            return ProductType.ARD_CU
         raise Exception( f'Unsupported type: {value}' )
 
-class CollectionCategory(enum.Enum):
-
-    O2  = enum.auto()
-    BT  = enum.auto()
-    MTL = enum.auto()
-    QA  = enum.auto()
-    SR  = enum.auto()
-    ST  = enum.auto()
-    T1  = enum.auto()
-    T2  = enum.auto()
-    TOA = enum.auto()
-
-    def description(self):
-
-        if self == CollectionCategory.BT:
-            return 'Top of Atmosphere Brightness Temperature'
-        if self == CollectionCategory.MTL:
-            return 'Metadata File'
-        if self == CollectionCategory.QA:
-            return 'Quality'
-        if self == CollectionCategory.SR:
-            return 'Surface Reflectance'
-        if self == CollectionCategory.ST:
-            return 'Surface Temperature'
-        if self == CollectionCategory.T1:
-            return 'Tier 1'
-        if self == CollectionCategory.T2:
-            return 'Tier 2'
-        if self == CollectionCategory.O2:
-            return "O2"
-        if self == CollectionCategory.TOA:
-            return 'Top of Atmosphere Reflectance'
-
-        raise Exception( 'Unsupported type' )
-
-    @staticmethod
-    def from_str( value ):
-
-        if value == '02':
-            return CollectionCategory.O2
-        if value == 'BT':
-            return CollectionCategory.BT
-        if value == 'MTL':
-            return CollectionCategory.MTL
-        if value == 'QA':
-            return CollectionCategory.QA
-        if value == 'ST':
-            return CollectionCategory.ST
-        if value == 'SR':
-            return CollectionCategory.SR
-        if value == 'T1':
-            return CollectionCategory.T1
-        if value == 'T2':
-            return CollectionCategory.T2
-        if value == 'TOA':
-            return CollectionCategory.TOA
-        raise Exception( f'Unsupported Type: {value}' )
 
 class FileType(enum.Enum):
 
-    ANG     = enum.auto()
-    B1      = enum.auto()
-    B2      = enum.auto()
-    B3      = enum.auto()
-    B4      = enum.auto()
-    B5      = enum.auto()
-    B6      = enum.auto()
-    B7      = enum.auto()
-    B8      = enum.auto()
-    B9      = enum.auto()
-    B10     = enum.auto()
-    B11     = enum.auto()
-    UNKNOWN = enum.auto() # For everything else
+    ANG      = enum.auto()
+    B1       = enum.auto()
+    B2       = enum.auto()
+    B3       = enum.auto()
+    B4       = enum.auto()
+    B5       = enum.auto()
+    B6       = enum.auto()
+    B7       = enum.auto()
+    B8       = enum.auto()
+    B9       = enum.auto()
+    B10      = enum.auto()
+    B11      = enum.auto()
+    BT_B6    = enum.auto()
+    ST_B6    = enum.auto()
+    ST_CDIST = enum.auto()
+    ST_EMIS  = enum.auto()
+    ST_QA    = enum.auto()
+    UNKNOWN  = enum.auto() # For everything else
 
     def description(self):
         raise Exception( f'Unsupported type{self}' )
@@ -148,6 +96,7 @@ class FileType(enum.Enum):
         data = {}
         for f in filter( lambda x: x != FileType.UNKNOWN, list(FileType)):
             data[f'{f.name}_path'] = None
+
         return data
         
     @staticmethod
@@ -161,8 +110,9 @@ class FileType(enum.Enum):
 
         regex = '[a-zA-Z0-9]{1,}_path'
         if is_reprojected:
+            raise Exception('No longer working.')
             regex = '[a-zA-Z0-9]{1,}_reprojected_path'
-
+        
         res = re.match( regex, column_name )
         if res is None:
             return False
@@ -192,16 +142,28 @@ class CollectID:
 
     def cid(self):
         '''
-        Return the Collection ID
+        Return the Collection ID. 
+
+        This method is really weird and super customized based on product-type.
         '''
         if self.m_is_file:
             bname = os.path.basename(self.pathname())
-            ct = self.collection_category( bname ).name
+
+            #  Locate the processing-level, without calling processing_level() function
+            proc_level = self.pathname().split('_')[1]
             
-            idx = bname.find(ct)
-            return bname[0:idx-1]
-            
-        return os.path.basename(self.pathname())
+            #  Ignore the collection number
+            proc_levels = [ 'L1TP', 'L1GT', 'CU' ]
+            if proc_level in proc_levels:
+                regex = 'L[COTE][0-9]{2}_[a-zA-Z0-9]{2,4}_[0-9]{6}_[0-9]{8}_[0-9]{8}_[0-9]{2}'
+                res = re.match( regex, os.path.basename( self.pathname() ) )
+                return res[0]
+
+        else:
+            # Stop at the 6th underscore
+            regex = 'L[COTE][0-9]{2}_[a-zA-Z0-9]{2,4}_[0-9]{6}_[0-9]{8}_[0-9]{8}_[0-9]{2}'
+            res = re.match( regex, os.path.basename( self.pathname() ) )
+            return res[0]
 
     def sensor(self):
         return Sensor.from_str( self.cid()[1] )
@@ -246,7 +208,7 @@ class CollectID:
             return None
 
         tpstr = self.processing_level()
-        if tpstr == ProductType.CU:
+        if tpstr == ProductType.ARD_CU:
 
             pl_us = self.cid()[5:].find('_')
             ard_substr = self.cid()[5:][pl_us+1:pl_us+7]
@@ -258,7 +220,7 @@ class CollectID:
             return None
 
         tpstr = self.processing_level()
-        if tpstr == ProductType.CU:
+        if tpstr == ProductType.ARD_CU:
 
             pl_us = self.cid()[5:].find('_')
             ard_substr = self.cid()[5:][pl_us+1:pl_us+7]
@@ -296,47 +258,40 @@ class CollectID:
             sub = sub[us_idx+1:]
         return int(sub[0:2])
 
-    def collection_category(self, basename = None):
-        
-        #  We need the substring after the sixth underscore
-        if basename is None:
-            sub = self.cid()
-        else:
-            sub = basename
-        for x in range( 0, 6 ):
-            us_idx = sub.find('_')
-            sub = sub[us_idx+1:]
-
-        # if a file, we must find the 7th underscore
-        end_pos = len(sub)
-        if self.m_is_file:
-            end_pos = sub.find('_')
-        return CollectionCategory.from_str(sub[0:end_pos])
-
     def file_type(self):
         if self.m_is_file:
             
             #  We need the substring after the seventh underscore
             sub = os.path.splitext( os.path.basename(self.pathname()))[0]
 
-            for x in range( 0, 7 ):
-                us_idx = sub.find('_')
-                sub = sub[us_idx+1:]
+            #  For ARD, we don't have a "tier"
+            if self.processing_level().is_ard():
 
-            #  Landsat 7 likes to add B6_VCID_1 or things like that.
-            if self.satellite() == 7:
-                if sub == 'B6_VCID_1':
-                    sub = 'B6'
-                elif sub == 'B6_VCID_2':
-                    sub = 'B10'
+                for x in range( 0, 6 ):
+                    us_idx = sub.find('_')
+                    sub = sub[us_idx+1:]
+
+                return FileType.from_str(sub)
+
+            else:
+                for x in range( 0, 7 ):
+                    us_idx = sub.find('_')
+                    sub = sub[us_idx+1:]
+
+                #  Landsat 7 likes to add B6_VCID_1 or things like that.
+                if self.satellite() == 7:
+                    if sub == 'B6_VCID_1':
+                        sub = 'B6'
+                    elif sub == 'B6_VCID_2':
+                        sub = 'B10'
                 
-            #  Some sensor types (L2SP for example), add SR_B5 or a product
-            #  designation with it.
-            if self.processing_level() == ProductType.L2SP:
-                us_idx = sub.find('_')
-                sub = sub[us_idx+1:]
+                #  Some sensor types (L2SP for example), add SR_B5 or a product
+                #  designation with it.
+                if self.processing_level() == ProductType.L2SP:
+                    us_idx = sub.find('_')
+                    sub = sub[us_idx+1:]
 
-            return FileType.from_str(sub)
+                return FileType.from_str(sub)
         
         return None
 
@@ -360,7 +315,7 @@ class CollectID:
         cid = os.path.basename( pathname )
 
         #  Check against regex list
-        regex = 'L[COTE][0-9]{2}_[a-zA-Z0-9]{2,4}_[0-9]{6}_[0-9]{8}_[0-9]{8}_[0-9]{2}_[a-zA-Z0-9]{2,8}'
+        regex = 'L[COTE][0-9]{2}_[a-zA-Z0-9]{2,4}_[0-9]{6}_[0-9]{8}_[0-9]{8}_[0-9]{2}'
         res = re.match( regex, cid )
         if res is None:
             return None
@@ -386,9 +341,7 @@ class CollectID:
                  'ard_col': [],
                  'ard_row': [],
                  'acquisition_date': [],
-                 'production_date': [],
-                 'collection_number': [],
-                 'collection_category': [] }
+                 'production_date': [] }
 
         #  File types are managed by the enum
         ftypes = FileType.create_empty_dict()
@@ -408,8 +361,6 @@ class CollectID:
             data['ard_row'].append( cid.ard_row() )
             data['acquisition_date'].append( cid.acquisition_date() )
             data['production_date'].append( cid.production_date() )
-            data['collection_number'].append( cid.collection_number() )
-            data['collection_category'].append( cid.collection_category().name )
 
             #  Create dictionary we can update with files we discover
             available_files = FileType.create_empty_dict()
